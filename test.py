@@ -18,6 +18,12 @@ all_xlsx_files = pathlib.Path.cwd().rglob('*.xlsx')
 
 
 
+# print_user_agent.py
+import requests
+
+json = requests.get('http://httpbin.org/user-agent').json()
+print(json['user-agent'])
+
 # -------------- click
 
 @click.command()
